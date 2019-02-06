@@ -1,0 +1,53 @@
+// Variables
+
+$heading: "Noto Serif", serif;
+$body: "Poppins", sans-serif;
+
+$blue: #2273aa;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$white: #fff;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffb300 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$color1: #2d3436;
+$color2: #636e72;
+$color3: #b2bec3;
+$color4: #dfe6e9;
+$color5: #ff3838;
+$color6: #ff4d4d;
+$color7: #ff7675;
+$color8: #ffcccc;
+$color9: #6c5ce7;
+$color10: #0984e3;
+$color12: #00cec9;
+$color13: #00b894;
+$primary: $color1;
+$secondary: $color5;
+
+// Font size
+$h1-font-size: 3rem; // 48px
+$h2-font-size: 2.25rem; // 36px
+$h3-font-size: 1.875rem; // 30px
+$h4-font-size: 1.5rem; // 24px
+$h5-font-size: 1.125rem; // 18px
+$h6-font-size: 1rem; // 16px
+$headings-margin-bottom: 1rem;
+// Font weight
+$font-weight-semi-bold: 600;
+$headings-font-weight: $font-weight-semi-bold;
+$headings-font-family: $heading;
+
+// Link
+
+$link-hover-color: $color5;
+
+// Buttons
+$btn-border-radius: 30px;
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1.5rem;
