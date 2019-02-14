@@ -15,7 +15,7 @@
     <body>
         <div class="navbar-dark bg-dark">
             <nav class="navbar navbar-expand-lg container">
-                <a class="navbar-brand text-uppercase" href="index.html"
+                <a class="navbar-brand text-uppercase" href="index.php"
                     >Blog App</a
                 >
                 <button
@@ -35,21 +35,21 @@
                 >
                     <ul class="navbar-nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="index.html"
+                            <a class="nav-link" href="index.php"
                                 >Home <span class="sr-only">(current)</span></a
                             >
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="blog.html">Blog</a>
+                            <a class="nav-link" href="blog.php">Blog</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="about.php">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact.php">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html"
+                            <a class="nav-link" href="login.php"
                                 ><em class="fa fa-user"></em> Login</a
                             >
                         </li>
