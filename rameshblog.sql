@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2019 at 09:33 AM
+-- Generation Time: Apr 01, 2019 at 12:00 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.39
 
@@ -55,8 +55,40 @@ INSERT INTO `blogs` (`id`, `title`, `body`, `author`, `is_published`, `created_a
 
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `title` int(11) NOT NULL
+  `title` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `title`, `slug`) VALUES
+(1, 'Gender', 'Gender'),
+(2, 'Lifestyle', 'Lifestyle'),
+(3, 'Self', 'Self');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `sender_name` varchar(255) NOT NULL,
+  `sender_subject` varchar(255) NOT NULL,
+  `sender_message` text NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `sender_name`, `sender_subject`, `sender_message`, `created_at`) VALUES
+(1, 'John', 'Great Content!!', 'Loved your content', '2019-04-01 15:39:16'),
+(2, 'Mary', 'Great Content!!', 'Loved your content', '2019-04-01 15:39:16');
 
 -- --------------------------------------------------------
 
@@ -65,9 +97,20 @@ CREATE TABLE `categories` (
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `name` varchar(123) NOT NULL
+  `id` int(123) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `created_at`) VALUES
+(5, 'prncdahal', 'Ramesh', 'Dahal', '2019-03-28 13:27:16'),
+(6, 'marydev', 'Mary', 'Dev', '2019-03-28 13:27:16');
 
 --
 -- Indexes for dumped tables
@@ -83,6 +126,12 @@ ALTER TABLE `blogs`
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -105,13 +154,19 @@ ALTER TABLE `blogs`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(123) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

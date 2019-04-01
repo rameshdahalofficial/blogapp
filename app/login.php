@@ -7,7 +7,7 @@
                         <hr class="mb-5" />
                         <div class="card">
                             <div class="card-body">
-                                <form action="" autocomplete="off">
+                                <form type="post" action="./admin/admin.php" autocomplete="off">
                                     <div class="form-group">
                                         <label class="font-weight-bold" for=""
                                             >Username or Emaill Address</label
@@ -29,13 +29,13 @@
                                             name="password"
                                         />
                                     </div>
-                                    <button
-                                        type="button"
+                                    <input
+                                      
+                                        type="submit"
                                         id="sendlogin"
                                         class="btn btn-primary"
                                     >
-                                        login
-                                    </button>
+                                      
                                 </form>
                             </div>
                         </div>
